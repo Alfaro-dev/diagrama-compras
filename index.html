@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proceso de Compras - Diagrama</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .mermaid { font-size: 14px; }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-800 to-blue-600 text-white py-6 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <h1 class="text-2xl font-bold flex items-center gap-3">
+                <span>📋</span> PROCESO DE COMPRAS
+            </h1>
+            <p class="text-blue-200 mt-1">Diagrama de flujo de procesos empresariales</p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-8">
+        <!-- Flowchart -->
+        <div class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+            <h2 class="text-xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+                <span>📊</span> Diagrama de Flujo
+            </h2>
+            <div class="mermaid">
+flowchart TB
+    subgraph ETAPA_1["<b>📋 ETAPA 1: REQUERIMIENTO</b>"]
+        A1[<b>📝</b> Elaboración requerimiento<br/>de materiales]
+        A2[<b>✅</b> Aprobación del jefe]
+    end
+    
+    subgraph ETAPA_2["<b>🔍 ETAPA 2: EVALUACIÓN Y SELECCIÓN</b>"]
+        B1[<b>📊</b> Evaluación de propuestas]
+        B2[<b>👥</b> Selección de proveedores]
+        B3[<b>🤝</b> Negociación y contratación]
+    end
+    
+    subgraph ETAPA_3["<b>🛒 ETAPA 3: ADQUISICIÓN</b>"]
+        C1[<b>📄</b> Elaboración orden<br/>de compra]
+        C2[<b>📨</b> Distribución orden<br/>de compra]
+        C3[<b>📦</b> Seguimiento de entrega]
+    end
+    
+    subgraph ETAPA_4["<b>📥 ETAPA 4: RECIBIMIENTO</b>"]
+        D1[<b>📬</b> Recepción de mercadería]
+        D2[<b>🔎</b> Verificación de<br/>calidad y cantidad]
+        D3[<b>✅</b> Inspección]
+    end
+    
+    subgraph ETAPA_5["<b>💰 ETAPA 5: FACTURACIÓN Y PAGO</b>"]
+        E1[<b>📨</b> Recepción de factura]
+        E2[<b>🔍</b> Revisión de factura]
+        E3[<b>✅</b> Verificación de<br/>calidad y cantidad]
+        E4[<b>✅</b> Verificación de<br/>proveedores]
+        E5[<b>💵</b> Liquidación y pago]
+    end
+    
+    subgraph GESTIONES["<b>🏢 GESTIONES DE SOPORTE</b>"]
+        G1[<b>🏦</b> Gestión de cartera<br/>y tesorería]
+        G2[<b>📦</b> Gestión de almacén<br/>e inventarios]
+        G3[<b>💳</b> Gestión financiera]
+    end
+    
+    A1 --> A2
+    A2 --> B1
+    B1 --> B2
+    B2 --> B3
+    B3 --> C1
+    C1 --> C2
+    C2 --> C3
+    C3 --> D1
+    D1 --> D2
+    D2 --> D3
+    D3 --> E1
+    E1 --> E2
+    E2 --> E3
+    E3 --> E4
+    E4 --> E5
+    
+    A2 -.->|"Salida"| G1
+    E5 -.->|"Salida"| G1
+    D3 -.->|"Salida"| G2
+    E5 -.->|"Salida"| G3
+    
+    style ETAPA_1 fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+    style ETAPA_2 fill:#fef3c7,stroke:#d97706,stroke-width:2px
+    style ETAPA_3 fill:#d1fae5,stroke:#059669,stroke-width:2px
+    style ETAPA_4 fill:#fce7f3,stroke:#db2777,stroke-width:2px
+    style ETAPA_5 fill:#e0e7ff,stroke:#4f46e5,stroke-width:2px
+    style GESTIONES fill:#f3f4f6,stroke:#6b7280,stroke-width:2px
+            </div>
+        </div>
+
+        <!-- Step by Step Cards -->
+        <h2 class="text-xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+            <span>📝</span> Pasos del Proceso
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Etapa 1 -->
+            <div class="bg-blue-50 border-2 border-blue-200 rounded-xl p-6">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">1</span>
+                    <h3 class="font-bold text-blue-800 text-lg">📋 Requerimiento</h3>
+                </div>
+                <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex items-start gap-2">
+                        <span class="text-blue-500">▸</span>
+                        <span>Elaboración de requerimiento de materiales</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-blue-500">▸</span>
+                        <span>Aprobación del jefe</span>
+                    </li>
+                </ul>
+                <div class="mt-4 pt-4 border-t border-blue-200">
+                    <p class="text-xs text-blue-600 font-medium">👆 Inicia el proceso</p>
+                </div>
+            </div>
+
+            <!-- Etapa 2 -->
+            <div class="bg-amber-50 border-2 border-amber-200 rounded-xl p-6">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="w-10 h-10 bg-amber-600 text-white rounded-full flex items-center justify-center font-bold">2</span>
+                    <h3 class="font-bold text-amber-800 text-lg">🔍 Evaluación y Selección</h3>
+                </div>
+                <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex items-start gap-2">
+                        <span class="text-amber-500">▸</span>
+                        <span>Evaluación de propuestas</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-amber-500">▸</span>
+                        <span>Selección de proveedores</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-amber-500">▸</span>
+                        <span>Negociación y contratación</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Etapa 3 -->
+            <div class="bg-emerald-50 border-2 border-emerald-200 rounded-xl p-6">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="w-10 h-10 bg-emerald-600 text-white rounded-full flex items-center justify-center font-bold">3</span>
+                    <h3 class="font-bold text-emerald-800 text-lg">🛒 Adquisición</h3>
+                </div>
+                <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex items-start gap-2">
+                        <span class="text-emerald-500">▸</span>
+                        <span>Elaboración orden de compra</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-emerald-500">▸</span>
+                        <span>Distribución orden de compra</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-emerald-500">▸</span>
+                        <span>Seguimiento de entrega</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Etapa 4 -->
+            <div class="bg-pink-50 border-2 border-pink-200 rounded-xl p-6">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="w-10 h-10 bg-pink-600 text-white rounded-full flex items-center justify-center font-bold">4</span>
+                    <h3 class="font-bold text-pink-800 text-lg">📥 Recibimiento</h3>
+                </div>
+                <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex items-start gap-2">
+                        <span class="text-pink-500">▸</span>
+                        <span>Recepción de mercadería</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-pink-500">▸</span>
+                        <span>Verificación de calidad y cantidad</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-pink-500">▸</span>
+                        <span>Inspección</span>
+                    </li>
+                </ul>
+                <div class="mt-4 pt-4 border-t border-pink-200">
+                    <p class="text-xs text-pink-600 font-medium">→ Gestiona almacén e inventarios</p>
+                </div>
+            </div>
+
+            <!-- Etapa 5 -->
+            <div class="bg-indigo-50 border-2 border-indigo-200 rounded-xl p-6">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold">5</span>
+                    <h3 class="font-bold text-indigo-800 text-lg">💰 Facturación y Pago</h3>
+                </div>
+                <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex items-start gap-2">
+                        <span class="text-indigo-500">▸</span>
+                        <span>Recepción de factura</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-indigo-500">▸</span>
+                        <span>Revisión de factura</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-indigo-500">▸</span>
+                        <span>Verificación de calidad y cantidad</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-indigo-500">▸</span>
+                        <span>Verificación de proveedores</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-indigo-500">▸</span>
+                        <span>Liquidación y pago</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Gestiones -->
+            <div class="bg-gray-100 border-2 border-gray-300 rounded-xl p-6">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="w-10 h-10 bg-gray-600 text-white rounded-full flex items-center justify-center font-bold">🏢</span>
+                    <h3 class="font-bold text-gray-800 text-lg">Gestiones de Soporte</h3>
+                </div>
+                <ul class="space-y-3 text-sm text-gray-700">
+                    <li class="flex items-center gap-2 bg-white p-2 rounded-lg">
+                        <span>🏦</span>
+                        <span>Gestión de cartera y tesorería</span>
+                    </li>
+                    <li class="flex items-center gap-2 bg-white p-2 rounded-lg">
+                        <span>📦</span>
+                        <span>Gestión de almacén e inventarios</span>
+                    </li>
+                    <li class="flex items-center gap-2 bg-white p-2 rounded-lg">
+                        <span>💳</span>
+                        <span>Gestión financiera</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-400 text-center py-6 mt-12">
+        <p>Diagrama de Proceso de Compras - Generado automáticamente</p>
+    </footer>
+
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'base',
+            themeVariables: {
+                primaryColor: '#2563eb',
+                primaryTextColor: '#1e293b',
+                primaryBorderColor: '#2563eb',
+                lineColor: '#64748b',
+                secondaryColor: '#f1f5f9',
+                tertiaryColor: '#ffffff'
+            },
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true,
+                curve: 'basis'
+            }
+        });
+    </script>
+</body>
+</html>
